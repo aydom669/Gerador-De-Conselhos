@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2? family= Manrope:wght@800 & family= Outfit:wght@300;400;600 & family= Poppins:ital,wght@0,100; 0,600;1,100;1,300 & family= Roboto:wght@300;400;500 & family= Rubik:wght@300;400;500 & display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+
+    --Grayish-Blue: hsl(217, 19%, 38%); 
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%); 
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+
+    background: var(--Dark-Grayish-Blue);
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 15px;
+}
+.card{
+    width: 95%;
+    max-width: 30rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: var(--Grayish-Blue);
+    border-radius: 15px;
+    padding: 4rem 0px 4.2rem 0px;
+    position: relative;
+
+}
+
+.advice-id{
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    padding: 15px 0;
+    letter-spacing: 0.3rem;
+}
+#advice{
+    color: var(--Light-Cyan);
+    padding: 0 20px;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.dvmoba{
+    padding: 10px 0;
+}
+
+.dvpc{
+    display: none;
+}
+
+.btn{
+    position: absolute;
+    padding: 15px;
+    background: var(--Neon-Green);
+    border-radius: 50px;
+    bottom: -20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+ }
+ 
+ .btn:hover{
+    box-shadow: 0 0 2rem hsl(150, 100%, 66%, 0.75);
+ }
+
+
+ @media screen and (min-width: 1440px) {
+    .dvpc{
+        display: block;
+        padding: 20px 0;
+    }
+
+    .dvmoba{
+        display: none;
+    }
+ }
