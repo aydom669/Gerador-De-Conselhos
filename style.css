@@ -18,7 +18,7 @@
 body {
     font-family: 'Manrope', sans-serif;
 
-    background: var(--Dark-Grayish-Blue);
+    background: var(--Dark-Blue);
 }
 
 main {
@@ -39,7 +39,7 @@ h1{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: var(--Grayish-Blue);
+    background: var( --Dark-Grayish-Blue);
     border-radius: 15px;
     padding: 4rem 0px 4.2rem 0px;
     position: relative;
@@ -61,6 +61,7 @@ h1{
 
 .dvmoba{
     padding: 10px 0;
+    color: #fff;
 }
 
 .dvpc{
