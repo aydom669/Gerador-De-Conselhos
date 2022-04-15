@@ -22,7 +22,7 @@ const getAdvice = () => {
         let adviceNumber = document.getElementById("advice-id");
         let adviceText = document.getElementById("advice");
 
-        adviceNumber.innerHTML = "ADVICE # " + data.slip.id;
+        adviceNumber.innerHTML = "ADVICE #" + data.slip.id;
         adviceText.innerHTML = "\"" + data.slip.advice + "\""
     })
 }
