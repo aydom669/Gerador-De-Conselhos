@@ -1,32 +1,40 @@
 
+/* API URL 
+===================================================*/
 
+const apiUrl =  "https://api.adviceslip.com/advice";
 
-// Url da API
+/* function que ira retorna a informações da API
+====================================================*/
 
-const advice_api_url = "https://api.adviceslip.com/advice";
-
-async function getAPI(){
-    const response = await fetch(advice_api_url);
-    let data = await response.json();
+async function getApi(){
+    const Resp = await fetch(apiUrl);
+    let data = await Resp.json();
     return data;
 }
 
-function getAdvice(){
-    Promise.resolve(getAPI()).then(function(data){
+/* ira emprimir as informações da API nos elementos HTML  
+===============================================================*/
+
+const getAdvice = () => {
+    Promise.resolve(getApi())
+    .then((data) => {
         let adviceNumber = document.getElementById("advice-id");
         let adviceText = document.getElementById("advice");
-    
-        adviceNumber.innerHTML = "ADVICE # "+data.slip.id;
-        adviceText.innerHTML = "\""+data.slip.advice+"\""
-    });
+
+        adviceNumber.innerHTML = "ADVICE # " + data.slip.id;
+        adviceText.innerHTML = "\"" + data.slip.advice + "\""
+    })
 }
 
 getAdvice();
 
-document.addEventListener("DOMContentLoaded", (event)=>{
-    let rollDice = document.getElementById("btn");
+/* fuction que ira sortea o conselho quando o botao for clicado 
+========================================================================*/
 
-    rollDice.addEventListener("click", function(){
+document.addEventListener("DOMContentLoaded" , (event) => {
+    let rolaDados = document.getElementById("btn");
+    rolaDados.addEventListener("click", () => {
         getAdvice();
     });
 });
