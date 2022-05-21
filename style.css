@@ -76,12 +76,19 @@ h1{
     bottom: -20px;
     cursor: pointer;
     border: none;
+    transition: 1.5s;
     outline: none;
+    
  }
  
  .btn:hover{
     box-shadow: 0 0 2rem hsl(150, 100%, 66%, 0.75);
  }
+
+.active{
+     transform: rotate(360deg);
+ }
+
 
 
  @media screen and (min-width: 1440px) {

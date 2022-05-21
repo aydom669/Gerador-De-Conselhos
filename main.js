@@ -38,3 +38,10 @@ document.addEventListener("DOMContentLoaded" , (event) => {
         getAdvice();
     });
 });
+
+let btnRotate = document.querySelector(".btn");
+
+document.querySelector('.btn').addEventListener('click', ()=>{
+    btnRotate.classList.toggle('active')
+
+})
